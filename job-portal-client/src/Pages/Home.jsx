@@ -84,14 +84,13 @@ const Home = () => {
           salaryType,
           employmentType,
           postingDate,
-        }) => 
-        
+        }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
           parseInt(maxPrice) <= parseInt(selected) ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
-          employmentType.toLowerCase() === selected.toLowerCase()||
-          postingDate >= selected 
+          employmentType.toLowerCase() === selected.toLowerCase() ||
+          postingDate >= selected
       );
       console.log(filteredJobs);
     }
@@ -157,7 +156,9 @@ const Home = () => {
         </div>
 
         {/* right side */}
-        <div className="bg-white p-4 rounded"><Newsletter/></div>
+        <div className="bg-white p-4 rounded">
+          <Newsletter />
+        </div>
       </div>
     </div>
   );
